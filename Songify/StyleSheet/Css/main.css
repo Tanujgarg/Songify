@@ -31,7 +31,10 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url("../../ImageFiles/Background/music1.jpg") no-repeat center fixed;
+    background-image: url("../../ImageFiles/Background/music1.jpg");
+    background-repeat: no-repeat;
+    background-size:100% auto;
+
 }
 .welcome-screen h1{
     font-size: 3.0em;
