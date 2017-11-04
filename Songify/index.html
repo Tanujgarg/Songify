@@ -3,54 +3,75 @@
 
 <head>
     <meta charset="UTF-8">
-    <title> Song App</title>
-    <link rel="stylesheet" type="text/css" href="font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Songify | A Music App</title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet/Font/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="StyleSheet/Css/main.css">
+    <link rel="stylesheet" type="text/css" href="StyleSheet/Animation/animate.css">
+    <link rel="stylesheet" type="text/css" href="StyleSheet/Animation/hover.css">
 
 </head>
 
 <body>
     <div class="wrapper">
         <section class="welcome-screen">
-            <h1> Welcome to Songify </h1>
-            <h3> Enter name to access your account </h3>
+            <h1 style="color: white" class="animated fadeInLeftBig hvr-pulse"> Welcome to Songify </h1>
+            <h3 style="color: white" class="animated fadeInRightBig"> Enter your name to continue </h3>
             <div class="input-wrapper">
-                <form  id="myform" action="javascript:void(0);">
-                    <input type="text" placeholder="Enter Your Name" id="name-input" required pattern="[A-Z a-z]{3,}" title="Please Enter valid Name (Name must be of 3 or more char.)">
-                    <input type="submit" id="button">
+                <form  id="myform" action="javascript:void(0);" class="animated zoomIn">
+                    <input class="hvr-grow" type="text" placeholder="Enter Your Name (Nickname)" id="name-input" required pattern="[A-Za-z]{3,}" title="Please Enter valid Name (Name must be of 3 or more alpha. only)">
+                    <!--<input type="text" placeholder="Last Name (optional)" id="last-name">-->
+                    <input class="hvr-grow" type="submit" id="button">
                 </form>
             </div>
         </section>
         <div class="main hidden" id="main">
             <header>
-                <div class="right floated user-name">
+                <div class="right floated user-name animated bounce hvr-pulse">
                     <h3></h3>
                 </div>
                 <div class="left floated" id="back">
-                    <h2><a href="index.html"><--Go Back</a> </h2>
+                    <h2 class="hvr-sweep-to-left"><a href="index.html"><--Go Back</a> </h2>
                 </div>
             </header>
             <section class="content">
-                <audio src="song.mp3"></audio>
+                <audio src="MusicFiles/song.mp3"></audio>
                 <div class="list-headers">
         <div> Title</div>
         <div> Artist </div>
         <div> Album </div>
         <div> Duration </div>
         </div>
-        <div class="song-list">
-        <div class="song" id="song">
-        <span class="song-name"></span>
-        <span class="song-artist"></span>
-        <span class="song-album"></span>
-        <span class="song-length"></span>
-        </div>
+        <div class="song-list animated zoomIn" >
+            <div class="song hvr-grow" id="song1">
+                <span class="song-name"></span>
+                <span class="song-artist"></span>
+                <span class="song-album"></span>
+                <span class="song-length"></span>
+            </div>
+            <div class="song hvr-grow" id="song2">
+                <span class="song-name"></span>
+                <span class="song-artist"></span>
+                <span class="song-album"></span>
+                <span class="song-length"></span>
+            </div>
+            <div class="song hvr-grow" id="song3">
+                <span class="song-name"></span>
+                <span class="song-artist"></span>
+                <span class="song-album"></span>
+                <span class="song-length"></span>
+            </div>
+            <div class="song hvr-grow" id="song4">
+                <span class="song-name"></span>
+                <span class="song-artist"></span>
+                <span class="song-album"></span>
+                <span class="song-length"></span>
+            </div>
         </div>
             </section>
             <footer>
                 <div class="controls">
                     <div class="player-buttons">
-                        <i class="fa fa-play clickable play-icon" aria-hidden="true"></i>
+                        <i class="fa fa-play clickable play-icon hvr-grow" aria-hidden="true"></i>
                     </div>
                     <div class="progress-wrapper">
                         <span class="time-elapsed"> </span>
@@ -63,9 +84,8 @@
             </footer>
         </div>
     </div>
-    <script src="jquery.js">
+    <script src="JavaScript/jquery.js">
     </script>
-    <script src="main.js"></script>
+    <script src="JavaScript/main.js"></script>
 </body>
-
 </html>
